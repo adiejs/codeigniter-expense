@@ -15,7 +15,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <link
       rel="shortcut icon"
       type="image/x-icon"
-      href="assets/img/favicon.jpg') ?>"
+      href=""
     />
 
     <link rel="stylesheet" href="<?= base_url('assets/css/bootstrap.min.css') ?>" />
@@ -253,28 +253,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <div class="sidebar-inner slimscroll">
           <div id="sidebar-menu" class="sidebar-menu">
             <ul>
-              <li class="active">
-                <a href="index.html"
+              <li class="<?= $active == 'dashboard' ? 'active' : ''; ?>">
+                <a href="<?= base_url('/') ?>"
                   ><img src="<?= base_url('assets/img/icons/dashboard.svg') ?>" alt="img" /><span>
                     Dashboard</span
                   >
                 </a>
               </li>
-              <li>
-                <a href="index.html"
+              <li class="<?= $active == 'income' ? 'active' : ''; ?>">
+                <a href="<?= base_url('index.php/income') ?>"
                   ><img src="<?= base_url('assets/img/icons/purchase1.svg') ?>" alt="img" /><span>
                     Pemasukan</span
                   >
                 </a>
               </li>
-              <li>
-                <a href="index.html"
+              <li class="<?= $active == 'expense' ? 'active' : ''; ?>">
+                <a href="<?= base_url('index.php/expense') ?>"
                   ><img src="<?= base_url('assets/img/icons/expense1.svg') ?>" alt="img" /><span>
                     Pengeluaran</span
                   >
                 </a>
               </li>
-              <li class="submenu">
+              <li class="submenu <?= $active == 'report' ? 'active' : ''; ?>">
                 <a href="javascript:void(0);"
                   ><img src="<?= base_url('assets/img/icons/time.svg') ?>" alt="img" /><span>
                     Laporan</span
@@ -282,18 +282,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                   <span class="menu-arrow"></span
                 ></a>
                 <ul>
-                  <li><a href="inventoryreport.html">Pemasukan</a></li>
-                  <li><a href="salesreport.html">Pengeluaran</a></li>
+                  <li><a href="#">Pemasukan</a></li>
+                  <li><a href="#">Pengeluaran</a></li>
                 </ul>
               </li>
-              <li class="submenu">
-                <a href="#"
+              <li class="<?= $active == 'user' ? 'active' : ''; ?>">
+                <a href="<?= base_url('index.php/user') ?>"
                   ><img src="<?= base_url('assets/img/icons/users1.svg') ?>" alt="img" /><span>
                     Pengguna</span>
                 </a>
               </li>
-              <li class="submenu">
-                <a href="#"
+              <li class="<?= $active == 'product' ? 'active' : ''; ?>">
+                <a href="<?= base_url('index.php/product') ?>"
                   ><img src="<?= base_url('assets/img/icons/product.svg') ?>" alt="img" /><span>
                     Produk</span>
                 </a>
