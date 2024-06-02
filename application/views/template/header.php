@@ -268,7 +268,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </a>
               </li>
               <li class="<?= $active == 'expense' ? 'active' : ''; ?>">
-                <a href="<?= base_url('index.php/expense') ?>"
+                <a href="<?= base_url('index.php/expenses') ?>"
                   ><img src="<?= base_url('assets/img/icons/expense1.svg') ?>" alt="img" /><span>
                     Pengeluaran</span
                   >

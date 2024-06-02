@@ -3,6 +3,7 @@
 <script src="<?= base_url('assets/js/jquery-3.6.0.min.js') ?>"></script>
 
 <script src="<?= base_url('assets/plugins/select2/js/select2.min.js') ?>"></script>
+<script src="<?= base_url('assets/plugins/select2/js/custom-select.js') ?>"></script>
 
 <script src="<?= base_url('assets/js/feather.min.js') ?>"></script>
 

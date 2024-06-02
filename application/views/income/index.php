@@ -137,17 +137,18 @@
                         </label>
                       </th>
                       <th>Product Name</th>
-                      <th>SKU</th>
-                      <th>Category</th>
-                      <th>Brand</th>
-                      <th>price</th>
-                      <th>Unit</th>
-                      <th>Qty</th>
-                      <th>Created By</th>
-                      <th>Action</th>
+                      <th>No. Transaki</th>
+                      <th>Harga Satuan</th>
+                      <th>Terjual</th>
+                      <th>Total</th>
+                      <th>Laba</th>
+                      <th>Tanggal</th>
+                      <th>Pengguna</th>
+                      <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
+                  <?php foreach($list as $d): ?>
                     <tr>
                       <td>
                         <label class="checkboxs">
@@ -158,19 +159,19 @@
                       <td class="productimgname">
                         <a href="javascript:void(0);" class="product-img">
                           <img
-                            src="<?= base_url('assets/img/product/product1.jpg') ?>"
+                            src="<?= base_url('assets/img/product/'). $d->gambar ?>"
                             alt="product"
                           />
                         </a>
-                        <a href="javascript:void(0);">Macbook pro</a>
+                        <a href="javascript:void(0);"><?= $d->nama_produk ?></a>
                       </td>
-                      <td>PT001</td>
-                      <td>Computers</td>
-                      <td>N/D</td>
-                      <td>1500.00</td>
-                      <td>pc</td>
-                      <td>100.00</td>
-                      <td>Admin</td>
+                      <td><?= $d->kode_transaksi ?></td>
+                      <td><?= $d->harga_jual ?></td>
+                      <td><?= $d->terjual ?></td>
+                      <td><?= $d->total ?></td>
+                      <td><?= $d->laba ?></td>
+                      <td><?= $d->tanggal ?></td>
+                      <td><?= $d->pengguna ?></td>
                       <td>
                         <a class="me-3" href="product-details.html">
                           <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
@@ -183,356 +184,7 @@
                         </a>
                       </td>
                     </tr>
-                    <tr>
-                      <td>
-                        <label class="checkboxs">
-                          <input type="checkbox" />
-                          <span class="checkmarks"></span>
-                        </label>
-                      </td>
-                      <td class="productimgname">
-                        <a href="javascript:void(0);" class="product-img">
-                          <img
-                            src="<?= base_url('assets/img/product/product2.jpg') ?>"
-                            alt="product"
-                          />
-                        </a>
-                        <a href="javascript:void(0);">Orange</a>
-                      </td>
-                      <td>PT002</td>
-                      <td>Fruits</td>
-                      <td>N/D</td>
-                      <td>10.00</td>
-                      <td>pc</td>
-                      <td>100.00</td>
-                      <td>Admin</td>
-                      <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
-                        <a class="confirm-text" href="javascript:void(0);">
-                          <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label class="checkboxs">
-                          <input type="checkbox" />
-                          <span class="checkmarks"></span>
-                        </label>
-                      </td>
-                      <td class="productimgname">
-                        <a href="javascript:void(0);" class="product-img">
-                          <img
-                            src="<?= base_url('assets/img/product/product3.jpg') ?>"
-                            alt="product"
-                          />
-                        </a>
-                        <a href="javascript:void(0);">Pineapple</a>
-                      </td>
-                      <td>PT003</td>
-                      <td>Fruits</td>
-                      <td>N/D</td>
-                      <td>10.00</td>
-                      <td>pc</td>
-                      <td>100.00</td>
-                      <td>Admin</td>
-                      <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
-                        <a class="confirm-text" href="javascript:void(0);">
-                          <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label class="checkboxs">
-                          <input type="checkbox" />
-                          <span class="checkmarks"></span>
-                        </label>
-                      </td>
-                      <td class="productimgname">
-                        <a href="javascript:void(0);" class="product-img">
-                          <img
-                            src="<?= base_url('assets/img/product/product4.jpg') ?>"
-                            alt="product"
-                          />
-                        </a>
-                        <a href="javascript:void(0);">Strawberry</a>
-                      </td>
-                      <td>PT004</td>
-                      <td>Fruits</td>
-                      <td>N/D</td>
-                      <td>10.00</td>
-                      <td>pc</td>
-                      <td>100.00</td>
-                      <td>Admin</td>
-                      <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
-                        <a class="confirm-text" href="javascript:void(0);">
-                          <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label class="checkboxs">
-                          <input type="checkbox" />
-                          <span class="checkmarks"></span>
-                        </label>
-                      </td>
-                      <td class="productimgname">
-                        <a href="javascript:void(0);" class="product-img">
-                          <img
-                            src="<?= base_url('assets/img/product/product5.jpg') ?>"
-                            alt="product"
-                          />
-                        </a>
-                        <a href="javascript:void(0);">Avocat</a>
-                      </td>
-                      <td>PT005</td>
-                      <td>Accessories</td>
-                      <td>N/D</td>
-                      <td>10.00</td>
-                      <td>pc</td>
-                      <td>150.00</td>
-                      <td>Admin</td>
-                      <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
-                        <a class="confirm-text" href="javascript:void(0);">
-                          <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label class="checkboxs">
-                          <input type="checkbox" />
-                          <span class="checkmarks"></span>
-                        </label>
-                      </td>
-                      <td class="productimgname">
-                        <a href="javascript:void(0);" class="product-img">
-                          <img
-                            src="<?= base_url('assets/img/product/product6.jpg') ?>"
-                            alt="product"
-                          />
-                        </a>
-                        <a href="javascript:void(0);">Macbook Pro</a>
-                      </td>
-                      <td>PT006</td>
-                      <td>Shoes</td>
-                      <td>N/D</td>
-                      <td>10.00</td>
-                      <td>pc</td>
-                      <td>100.00</td>
-                      <td>Admin</td>
-                      <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
-                        <a class="confirm-text" href="javascript:void(0);">
-                          <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label class="checkboxs">
-                          <input type="checkbox" />
-                          <span class="checkmarks"></span>
-                        </label>
-                      </td>
-                      <td class="productimgname">
-                        <a href="javascript:void(0);" class="product-img">
-                          <img
-                            src="<?= base_url('assets/img/product/product7.jpg') ?>"
-                            alt="product"
-                          />
-                        </a>
-                        <a href="javascript:void(0);">Apple Earpods</a>
-                      </td>
-                      <td>PT007</td>
-                      <td>Shoes</td>
-                      <td>N/D</td>
-                      <td>10.00</td>
-                      <td>pc</td>
-                      <td>100.00</td>
-                      <td>Admin</td>
-                      <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
-                        <a class="confirm-text" href="javascript:void(0);">
-                          <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label class="checkboxs">
-                          <input type="checkbox" />
-                          <span class="checkmarks"></span>
-                        </label>
-                      </td>
-                      <td class="productimgname">
-                        <a href="javascript:void(0);" class="product-img">
-                          <img
-                            src="<?= base_url('assets/img/product/product8.jpg') ?>"
-                            alt="product"
-                          />
-                        </a>
-                        <a href="javascript:void(0);">iPhone 11 </a>
-                      </td>
-                      <td>PT008</td>
-                      <td>Fruits</td>
-                      <td>N/D</td>
-                      <td>10.00</td>
-                      <td>pc</td>
-                      <td>100.00</td>
-                      <td>Admin</td>
-                      <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
-                        <a class="confirm-text" href="javascript:void(0);">
-                          <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label class="checkboxs">
-                          <input type="checkbox" />
-                          <span class="checkmarks"></span>
-                        </label>
-                      </td>
-                      <td class="productimgname">
-                        <a href="javascript:void(0);" class="product-img">
-                          <img
-                            src="<?= base_url('assets/img/product/product9.jpg') ?>"
-                            alt="product"
-                          />
-                        </a>
-                        <a href="javascript:void(0);">samsung </a>
-                      </td>
-                      <td>PT009</td>
-                      <td>Earphones</td>
-                      <td>N/D</td>
-                      <td>10.00</td>
-                      <td>pc</td>
-                      <td>100.00</td>
-                      <td>Admin</td>
-                      <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
-                        <a class="confirm-text" href="javascript:void(0);">
-                          <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label class="checkboxs">
-                          <input type="checkbox" />
-                          <span class="checkmarks"></span>
-                        </label>
-                      </td>
-                      <td class="productimgname">
-                        <a href="javascript:void(0);" class="product-img">
-                          <img
-                            src="<?= base_url('assets/img/product/product11.jpg') ?>"
-                            alt="product"
-                          />
-                        </a>
-                        <a href="javascript:void(0);">Banana</a>
-                      </td>
-                      <td>PT0010</td>
-                      <td>Health Care</td>
-                      <td>N/D</td>
-                      <td>10.00</td>
-                      <td>kg</td>
-                      <td>100.00</td>
-                      <td>Admin</td>
-                      <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
-                        <a class="confirm-text" href="javascript:void(0);">
-                          <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
-                        </a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <label class="checkboxs">
-                          <input type="checkbox" />
-                          <span class="checkmarks"></span>
-                        </label>
-                      </td>
-                      <td class="productimgname">
-                        <a href="javascript:void(0);" class="product-img">
-                          <img
-                            src="<?= base_url('assets/img/product/product17.jpg') ?>"
-                            alt="product"
-                          />
-                        </a>
-                        <a href="javascript:void(0);">Limon</a>
-                      </td>
-                      <td>PT0011</td>
-                      <td>Health Care</td>
-                      <td>N/D</td>
-                      <td>10.00</td>
-                      <td>kg</td>
-                      <td>100.00</td>
-                      <td>Admin</td>
-                      <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
-                        <a class="confirm-text" href="javascript:void(0);">
-                          <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
-                        </a>
-                      </td>
-                    </tr>
+                    <?php endforeach; ?>
                   </tbody>
                 </table>
               </div>
@@ -550,49 +202,48 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <form action="#">
+                <?= form_open('income/create') ?>
                     <div class="form-group">
-                      <label>First Name</label>
-                      <input type="text" class="form-control" />
+                      <label>Nama Produk</label>
+                      <select id="nama-produk" name="nama_produk" class="js-example-basic-single select2" onchange="autocompleted()">
+                        <?php foreach ($data as $d): ?>
+                          <option value="<?= $d->nama_produk ?>"  
+                          data-modal="<?= $d->harga_modal ?>" 
+                          data-jual="<?= $d->harga_jual ?>"
+                          data-kode="<?= $d->kode_produk ?>">
+                          <?= $d->nama_produk ?>
+                        </option>
+                        <?php endforeach; ?>
+                      </select>
+                    </div>
+                    <input hidden id="kode-produk" name="kode_produk" type="text" class="form-control" /> 
+                    <div class="form-group">
+                      <label>Harga Modal</label>
+                      <input readonly id="harga-modal" name="harga_modal" type="text" class="form-control" />   
                     </div>
                     <div class="form-group">
-                      <label>Last Name</label>
-                      <input type="text" class="form-control" />
+                      <label>Harga Jual</label>
+                      <input readonly id="harga-jual" name="harga_jual" type="text" class="form-control" />
                     </div>
                     <div class="form-group">
-                      <label>Email Address</label>
-                      <input type="email" class="form-control" />
+                      <label>Jumlah Terjual</label>
+                      <input type="number" id="jumlah" name="jumlah" class="form-control" onchange="autocompleted()" min="1" required />
                     </div>
                     <div class="form-group">
-                      <label>Username</label>
-                      <input type="text" class="form-control" />
+                      <label>Total</label>
+                      <input readonly id="total" name="total" type="text" class="form-control" />
                     </div>
                     <div class="form-group">
-                      <label>Password</label>
-                      <input type="password" class="form-control" />
-                    </div>
-                    <div class="form-group">
-                      <label>Repeat Password</label>
-                      <input type="password" class="form-control" />
+                      <label>Laba</label>
+                      <input readonly id="laba" name="laba" type="text" class="form-control" />
                     </div>
                     <div class="text-end">
-                      <button type="submit" class="btn btn-primary">
+                      <button type="submit" value="submit" class="btn btn-primary">
                         Simpan
                       </button>
                     </div>
-                  </form>
+                <?= form_close() ?>
             </div>
           </div>
         </div>
       </div>
-
-      <script>
-        function openModal(){
-          var myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
-              keyboard: false
-            });
-
-            myModal.show();
-        }
-      </script>
-
