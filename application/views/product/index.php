@@ -173,12 +173,6 @@
 
 
                       <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
                         <a class="confirm-text" href="javascript:void(0);">
                           <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
                         </a>

@@ -2,8 +2,8 @@
         <div class="content">
           <div class="page-header">
             <div class="page-title">
-              <h4>Daftar Pemasukan</h4>
-              <h6>Pilih tombol tambah pemasukan untuk menambah daftar pemasukan.</h6>
+              <h4>Daftar Penjualan</h4>
+              <h6>Pilih tombol tambah penjualan untuk menambah daftar penjualan.</h6>
             </div>
             <div class="page-btn" onclick="openModal()">
               <a href="javascript:void(0);" class="btn btn-added"
@@ -11,7 +11,7 @@
                   src="<?= base_url('assets/img/icons/plus.svg') ?>"
                   alt="img"
                   class="me-1"
-                />Pemasukan</a
+                />Penjualan</a
               >
             </div>
           </div>
@@ -173,12 +173,6 @@
                       <td><?= $d->tanggal ?></td>
                       <td><?= $d->pengguna ?></td>
                       <td>
-                        <a class="me-3" href="product-details.html">
-                          <img src="<?= base_url('assets/img/icons/eye.svg') ?>" alt="img" />
-                        </a>
-                        <a class="me-3" href="editproduct.html">
-                          <img src="<?= base_url('assets/img/icons/edit.svg') ?>" alt="img" />
-                        </a>
                         <a class="confirm-text" href="javascript:void(0);">
                           <img src="<?= base_url('assets/img/icons/delete.svg') ?>" alt="img" />
                         </a>
@@ -198,7 +192,7 @@
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Tambah Pemasukan</h5>
+              <h5 class="modal-title" id="exampleModalLabel">Tambah Penjualan</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

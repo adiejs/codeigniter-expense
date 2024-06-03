@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       <div class="header">
         <div class="header-left active">
           <a href="index.html" class="logo">
-            <img src="<?= base_url('assets/img/logo.png') ?>" alt="" />
+            <img src="<?= base_url('assets/img/logobranch.png') ?>" alt="" />
           </a>
           <a href="index.html" class="logo-small">
             <img src="<?= base_url('assets/img/logo-small.png') ?>" alt="" />
@@ -197,7 +197,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               data-bs-toggle="dropdown"
             >
               <span class="user-img"
-                ><img src="<?= base_url('assets/img/profiles/avator1.jpg') ?>" alt="" />
+                ><img src="<?= base_url('assets/img/profiles/avatar-04.jpg') ?>" alt="" />
                 <span class="status online"></span
               ></span>
             </a>
@@ -205,11 +205,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <div class="profilename">
                 <div class="profileset">
                   <span class="user-img"
-                    ><img src="<?= base_url('assets/img/profiles/avator1.jpg') ?>" alt="" />
+                    ><img src="<?= base_url('assets/img/profiles/avatar-04.jpg') ?>" alt="" />
                     <span class="status online"></span
                   ></span>
                   <div class="profilesets">
-                    <h6>John Doe</h6>
+                    <h6>Kahawa</h6>
                     <h5>Admin</h5>
                   </div>
                 </div>
@@ -263,7 +263,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
               <li class="<?= $active == 'income' ? 'active' : ''; ?>">
                 <a href="<?= base_url('index.php/income') ?>"
                   ><img src="<?= base_url('assets/img/icons/purchase1.svg') ?>" alt="img" /><span>
-                    Pemasukan</span
+                    Penjualan</span
                   >
                 </a>
               </li>
@@ -296,6 +296,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a href="<?= base_url('index.php/product') ?>"
                   ><img src="<?= base_url('assets/img/icons/product.svg') ?>" alt="img" /><span>
                     Produk</span>
+                </a>
+              </li>
+              <li class="<?= $active == 'account' ? 'active' : ''; ?>">
+                <a href="<?= base_url('index.php/account') ?>"
+                  ><img src="<?= base_url('assets/img/icons/dollar-square.svg') ?>" alt="img" /><span>
+                    Akun Pengeluaran</span>
                 </a>
               </li>
             </ul>

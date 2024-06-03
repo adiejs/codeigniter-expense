@@ -48,10 +48,7 @@ class Income extends CI_Controller {
 			'tanggal'     => $tanggal
 
 		);
-
 			$this->Income_model->save($data);
-			redirect(base_url('index.php/income'));
-			
-			
+			redirect(base_url('index.php/income'));	
     }
 }

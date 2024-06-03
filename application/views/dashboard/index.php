@@ -11,8 +11,8 @@
                 </div>
                 <div class="dash-widgetcontent">
                   <h5>
-                    Rp<span class="counters" data-count="307144.00"
-                      >$307,144.00</span
+                    Rp<span class="counters" data-count="<?= $total_income ?>"
+                      ><?= $total_income ?></span
                     >
                   </h5>
                   <h6>Pemasukan</h6>
