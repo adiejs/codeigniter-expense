@@ -12,7 +12,7 @@
                 <div class="dash-widgetcontent">
                   <h5>
                     Rp<span class="counters" data-count="<?= $total_income ?>"
-                      ><?= $total_income ?></span
+                      ></span
                     >
                   </h5>
                   <h6>Pemasukan</h6>
@@ -28,8 +28,8 @@
                 </div>
                 <div class="dash-widgetcontent">
                   <h5>
-                    Rp<span class="counters" data-count="4385.00"
-                      >$4,385.00</span
+                    Rp<span class="counters" data-count="<?= $total_expense ?>"
+                      ></span
                     >
                   </h5>
                   <h6>Pengeluaran</h6>
@@ -45,8 +45,8 @@
                 </div>
                 <div class="dash-widgetcontent">
                   <h5>
-                    Rp<span class="counters" data-count="385656.50"
-                      >385,656.50</span
+                    Rp<span class="counters" data-count="<?= $total_profit ?>"
+                      ></span
                     >
                   </h5>
                   <h6>Laba</h6>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="dash-widgetcontent">
                   <h5>
-                    Rp<span class="counters" data-count="40000.00">400.00</span>
+                    Rp<span class="counters" data-count="<?= $total_income_all ?>"></span>
                   </h5>
                   <h6>Total Pemasukan</h6>
                 </div>

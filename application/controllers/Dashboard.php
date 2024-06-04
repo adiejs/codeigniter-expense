@@ -6,6 +6,7 @@ class Dashboard extends CI_Controller {
 	public function __construct() {
         parent::__construct();
 		$this->load->model("Income_model");
+		$this->load->model("Expenses_model");
 		$this->load->model("Account_model");
 		
     }
@@ -14,6 +15,9 @@ class Dashboard extends CI_Controller {
 	{
 		$data['active'] = 'dashboard';
 		$data['total_income'] = $this->Income_model->get_total_income_this_month();
+		$data['total_income_all'] = $this->Income_model->get_total_income_all();
+		$data['total_profit'] = $this->Income_model->get_total_profit_this_month();
+		$data['total_expense'] = $this->Expenses_model->get_total_expense_this_month();
 
 		$this->load->view('template/header', $data);
 		$this->load->view('dashboard/index', $data);

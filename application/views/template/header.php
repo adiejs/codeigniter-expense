@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=0"
     />
-    <title>Dreams Pos admin template</title>
+    <title>Kahawa Coffee</title>
 
     <link
       rel="shortcut icon"
