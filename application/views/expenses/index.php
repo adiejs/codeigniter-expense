@@ -208,7 +208,7 @@
 
                     <div class="form-group">
                       <label>Jumlah</label>
-                      <input type="number" id="jumlah" name="jumlah" class="form-control" required />
+                      <input type="number" id="jumlah" name="jumlah" class="form-control" required onchange="autocompleted()" />
                     </div>
                     <div class="form-group">
                       <label>Keterangan</label>

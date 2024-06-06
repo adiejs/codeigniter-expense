@@ -171,7 +171,7 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
+                        <!-- <tr>
                           <td>1</td>
                           <td class="productimgname">
                             <a href="productlist.html" class="product-img">
@@ -222,7 +222,7 @@
                             <a href="productlist.html">Macbook Pro</a>
                           </td>
                           <td>$291.01</td>
-                        </tr>
+                        </tr> -->
                       </tbody>
                     </table>
                   </div>
@@ -246,7 +246,7 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
+                    <!-- <tr>
                       <td>1</td>
                       <td><a href="javascript:void(0);">IT0001</a></td>
                       <td class="productimgname">
@@ -309,7 +309,7 @@
                       <td>N/D</td>
                       <td>Fruits</td>
                       <td>20-11-2022</td>
-                    </tr>
+                    </tr> -->
                   </tbody>
                 </table>
               </div>
