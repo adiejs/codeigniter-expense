@@ -3,21 +3,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Income extends CI_Controller {
 
+	private $data_user;
+
 	public function __construct() {
         parent::__construct();
 		$this->load->model("Product_model");
 		$this->load->model("Income_model");
+		$this->load->model("Auth_model");
 		$this->load->helper('form');
 
 		date_default_timezone_set("Asia/Jakarta");
-		
+
+		if(!$this->Auth_model->current_user()){
+			redirect('auth');
+		} else {
+			$this->data_user = $this->Auth_model->current_user();
+		}
     }
 
 	public function index()
 	{
-		$data['active'] = 'income';
-		$data['data']   = $this->Product_model->getAll();
-		$data['list']   = $this->Income_model->getAll();
+		$data['active'] 	= 'income';
+		$data['data']   	= $this->Product_model->getAll();
+		$data['list']   	= $this->Income_model->getAll();
+		$data['data_user']  = $this->data_user;
 
 		$this->load->view('template/header', $data);
 		$this->load->view('income/index');

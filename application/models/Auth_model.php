@@ -2,7 +2,7 @@
 
 class Auth_model extends CI_Model
 {
-    private $_table = "user";
+	private $_table = "user";
 	const SESSION_KEY = 'user_id';
 
 	public function find($username, $password)
@@ -36,7 +36,13 @@ class Auth_model extends CI_Model
 		return $query->row();
 	}
 
-    private function _update_last_login($id)
+	public function delete()
+	{
+		$this->session->unset_userdata(self::SESSION_KEY);
+		return !$this->session->has_userdata(self::SESSION_KEY);
+	}
+
+	private function _update_last_login($id)
 	{
 		$data = [
 			'last_login' => date("Y-m-d H:i:s"),

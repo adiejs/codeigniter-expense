@@ -3,21 +3,30 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Expenses extends CI_Controller {
 
+	private $data_user;
 	public function __construct() {
         parent::__construct();
 		$this->load->model("Expenses_model");
 		$this->load->model("Account_model");
+		$this->load->model("Auth_model");
 		$this->load->helper('form');
+		$this->load->library('session');
 
 		date_default_timezone_set("Asia/Jakarta");
-		
+
+		if(!$this->Auth_model->current_user()){
+			redirect('auth');
+		} else {
+			$this->data_user = $this->Auth_model->current_user();
+		}
     }
 
 	public function index()
 	{
-		$data['active'] = 'expense';
-		$data['data'] = $this->Account_model->getAll();
-		$data['list'] = $this->Expenses_model->getAll();
+		$data['active'] 	= 'expense';
+		$data['data'] 		= $this->Account_model->getAll();
+		$data['list'] 		= $this->Expenses_model->getAll();
+		$data['data_user'] 	= $this->data_user;
 
 		$this->load->view('template/header', $data);
 		$this->load->view('expenses/index');

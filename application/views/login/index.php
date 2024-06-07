@@ -33,21 +33,17 @@
         <div class="form-content">
           <div class="login-form">
             <div class="title">Login</div>
-          <?= form_open('auth/find') ?>
+          <?= form_open('auth') ?>
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <input type="text" name="username" placeholder="Username/email" required>
+                <input type="text" name="username" placeholder="Username/email" value="<?= set_value('username') ?>" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="password" placeholder="Password" value="<?= set_value('password') ?>" required>
               </div>
-              <?php
-              if (!empty($message)) {
-                echo '<div class="text">'. $message .'</div>';
-              }
-              ?>
+              <?= $flash_data ? $flash_data : "" ?>
               <div class="button input-box">
                 <input type="submit" value="Submit">
               </div>
